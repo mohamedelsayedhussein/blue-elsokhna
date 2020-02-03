@@ -2,6 +2,83 @@ body {
   font-family: "Cairo", sans-serif;
   overflow-x: hidden;
 }
+/* POPUP */
+
+#popup.modal-box {
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal-box .modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15%;
+  width: 40%;
+  padding: 2rem;
+  position: relative;
+}
+
+@media (max-width: 992px) {
+  .modal-box .modal-content {
+    width: 90%;
+    margin: 15% auto 5%;
+
+  }
+}
+
+.modal-box .modal-content .x-container .close {
+  position: absolute;
+  right: 20px;
+  top: 8px;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.modal-box .modal-content .x-container .close:hover {
+  color: #e62d2d;
+  cursor: pointer;
+}
+
+.modal-box .modal-content .modal-title {
+  color: #242424;
+}
+
+.modal-box .modal-content .container-input input {
+  width: 100%;
+  padding: 10px 0;
+  margin: 0 0 5px;
+  display: block;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+  caret-color: #e62d2d;
+}
+
+.modal-box .modal-content .container-input button {
+  background-color: #e62d2d;
+  color: white;
+  padding: 10px 0;
+  margin: 25px 0 0;
+  border: none;
+  cursor: pointer;
+  width: 5rem;
+  display: block;
+  -webkit-box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.3);
+}
+
+.modal-box .modal-content .container-input button:hover {
+  opacity: 0.8;
+}
+
+/* HEADER */
+
 header#header {
   position: absolute;
   top: 0;
@@ -14,7 +91,7 @@ header#header {
     rgba(255, 255, 255, 0.8) 45%,
     rgba(255, 255, 255, 0) 100%
   );
-  z-index: 99999;
+  z-index: 99;
 }
 header .logo {
   width: 200px;
@@ -296,25 +373,25 @@ footer#footer {
   background-size: 2000px 50px, cover;
 }
 footer#footer .social {
-   margin: 0;
-   padding: 0;
-   list-style: none;
- }
- footer#footer .social a {
-   color: #fff;
-   text-decoration: none;
-   line-height: 2;
- }
- footer#footer .social a i {
-   display: inline-block;
-   vertical-align: middle;
-   padding-left: .7rem;
- }
- footer#footer .rights {
-   border-top: 1px solid rgba(255, 255, 255, .1);
-   padding: .7rem 0;
-  }
-  footer#footer .rights p {
-    margin: 0;
-    padding: 0;
- }
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+footer#footer .social a {
+  color: #fff;
+  text-decoration: none;
+  line-height: 2;
+}
+footer#footer .social a i {
+  display: inline-block;
+  vertical-align: middle;
+  padding-left: 0.7rem;
+}
+footer#footer .rights {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.7rem 0;
+}
+footer#footer .rights p {
+  margin: 0;
+  padding: 0;
+}

@@ -18,6 +18,27 @@
 </head>
 
 <body>
+    <!-- POPUP -->
+    <div id="popup" class="modal-box">
+
+        <form class="modal-content">
+
+            <div class="x-container">
+                <span onclick="document.getElementById('popup').style.display='none'" class="close"
+                    title="Close">&times;</span>
+            </div>
+            <h2 class='modal-title mt-2 mb-4 font-weight-bold'>Contact Us</h2>
+
+            <div class="container-input">
+                <input type="text" name="uname" placeholder="Username">
+                <input type="email" name="my-mail" placeholder="Email">
+                <input type="email" name="my-phone" placeholder="Phone Number">
+
+                <button type="submit">Send</button>
+            </div>
+
+        </form>
+    </div>
     <!-- HEADER -->
     <header id="header">
         <div class="container">
@@ -319,6 +340,16 @@
                 },
             ]
         });
+
+        // POPUP SCRIPT
+        var modal = document.getElementById('popup');
+
+        window.onclick = function (event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+
     </script>
 </body>
 
